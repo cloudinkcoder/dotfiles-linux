@@ -92,9 +92,13 @@ coding_install()
   gcc --version && gdb -v && clang --version && make -v && cmake --version
   sudo pacman -S --noconfirm llvm clang lldb
   clang --version && lldb --version
-  # Java, Go
-  sudo pacman -S --noconfirm jdk-openjdk go
-  java --version && javac -version && go version
+  # Java, maven
+  sudo pacman -S --noconfirm jdk-openjdk maven
+  java --version && javac -version
+  mvn --version
+  # Go
+  sudo pacman -S --noconfirm go
+  go version
   # JavaScript (Node.js npm), Typescript
   sudo pacman -S --noconfirm nodejs npm typescript
   node -v && npm -v && tsc -v
