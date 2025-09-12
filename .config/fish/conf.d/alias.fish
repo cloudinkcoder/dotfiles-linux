@@ -2,6 +2,7 @@
 
 alias ll='ls -alh'
 alias rm='rm -i'
+alias cls='clear'
 
 # Shortcut key
 alias ff='fastfetch'
