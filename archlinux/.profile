@@ -22,10 +22,3 @@ PATH=~/texlive/2025/bin/x86_64-linux:$PATH; export PATH
 # 修复LaTeX的未知错误
 # export LC_ALL=C
 
-
-# clash代理
-# export http_proxy=192.168.31.211:10808
-# export https_proxy=127.0.0.1:7890
-# export all_proxy=192.168.31.211:10808
-
-

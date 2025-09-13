@@ -10,7 +10,7 @@ fish_config = [".config/fish/config.fish", ".config/fish/conf.d", ".config/fish/
 gpg_config = [".gnupg/gpg-agent.conf", ".gnupg/gpg.conf"]
 ssh_config = [".ssh/config"]
 vim_config = [".vimrc"]
-other_settings = []
+other_settings = [".sqliterc"]
 
 files = fish_config + gpg_config + ssh_config + vim_config + other_settings
 dirs = [".config/nvim", ".config/tmux", ".config/lazygit", ".config/containers"]
