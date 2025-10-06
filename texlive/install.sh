@@ -8,8 +8,13 @@ tar -xzf install-tl-unx.tar.gz && rm -f install-tl-unx.tar.gz
 ./install-tl-*/install-tl --profile=texlive.profile --repository=https://mirrors.aliyun.com/CTAN/systems/texlive/tlnet
 rm -rf install-tl-*
 
+# 设置镜像源
+tlmgr option repository https://mirrors.aliyun.com/CTAN/systems/texlive/tlnet
+# 设置保留最近一次备份 (默认设置)
+# tlmgr option autobackup 1
 # 额外安装字体（英文和中文）
-tlmgr install tex-gyre droid cm-unicode roboto junicode lm qualitype arphic-ttf fandol --repository https://mirrors.aliyun.com/CTAN/systems/texlive/tlnet
+tlmgr install tex-gyre droid cm-unicode roboto junicode lm qualitype arphic-ttf fandol
+# tlmgr install tex-gyre droid cm-unicode roboto junicode lm qualitype arphic-ttf fandol --repository https://mirrors.aliyun.com/CTAN/systems/texlive/tlnet
 # 字体配置
 # 必须安装fontconfig才能使用fc-cache
 sudo pacman -S --noconfirm fontconfig
