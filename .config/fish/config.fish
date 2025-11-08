@@ -31,8 +31,3 @@ alias lastpush="bash $dotfiles_dir/scripts/last-push.sh"
 alias repos="code ~/repos"
 alias totex="code ~/tex"
 ##########################
-# Coding
-alias coding="code ~/coding"
-# cd rust
-alias cdrust="code ~/coding/rust-learn"
-
