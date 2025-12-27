@@ -29,5 +29,4 @@ alias pyupdate="python3 $dotfiles_dir/scripts/pip-update.py"
 alias lastpush="bash $dotfiles_dir/scripts/last-push.sh"
 
 alias repos="code ~/repos"
-alias totex="code ~/tex"
 ##########################
