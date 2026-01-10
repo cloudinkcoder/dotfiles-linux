@@ -9,7 +9,7 @@ tar -xzf install-tl-unx.tar.gz && rm -f install-tl-unx.tar.gz
 rm -rf install-tl-*
 
 # 永久设置镜像源 (阿里镜像为例子)
-# tlmgr option repository https://mirrors.aliyun.com/CTAN/systems/texlive/tlnet
+tlmgr option repository https://mirrors.aliyun.com/CTAN/systems/texlive/tlnet
 # 根据地理位置自动选择镜像源 (推荐)
 tlmgr option repository https://mirror.ctan.org/systems/texlive/tlnet
 

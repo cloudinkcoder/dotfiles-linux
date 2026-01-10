@@ -13,8 +13,8 @@ sudo pacman -Scc --noconfirm
 # yes | sudo pacman -S pacman-contrib
 paccache -r
 
-# Use yay to clean
-yay -Scc --noconfirm
+# yay清理
+# yay -Scc --noconfirm
 
 
 
