@@ -23,8 +23,8 @@ alias update="sudo pacman -Syu --noconfirm"
 alias sync="python3 $dotfiles_dir/sync.py arch"
 
 
-alias clean="sudo bash $dotfiles_dir/scripts/clean.sh"
-alias mirror="sudo bash $dotfiles_dir/scripts/mirror.sh"
+alias clean="sudo bash $dotfiles_dir/scripts/clean.sh && sudo bash $dotfiles_dir/scripts/archlinux/clean.sh"
+alias mirror="sudo bash $dotfiles_dir/scripts/archlinux/mirror.sh"
 
 # python3 pip update
 alias pyupdate="python3 $dotfiles_dir/scripts/pip-update.py"
