@@ -10,4 +10,4 @@ export EDITOR='nvim'
 export GPG_TTY=$(tty)
 
 # TeXLive
-set PATH ~/texlive/2025/bin/x86_64-linux:$PATH
+set PATH ~/texlive/2026/bin/x86_64-linux:$PATH

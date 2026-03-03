@@ -5,6 +5,9 @@
 cd ~/repos/dotfiles-linux/texlive
 wget -q https://mirrors.aliyun.com/CTAN/systems/texlive/tlnet/install-tl-unx.tar.gz
 tar -xzf install-tl-unx.tar.gz && rm -f install-tl-unx.tar.gz
+# 保存配置文件
+./install-tl-*/install-tl --repository=https://mirrors.aliyun.com/CTAN/systems/texlive/tlnet
+# 直接根据配置文件进行安装
 ./install-tl-*/install-tl --profile=texlive.profile --repository=https://mirrors.aliyun.com/CTAN/systems/texlive/tlnet
 rm -rf install-tl-*
 
@@ -22,7 +25,7 @@ tlmgr install tex-gyre droid cm-unicode roboto junicode lm qualitype arphic-ttf 
 # 必须安装fontconfig才能使用fc-cache
 sudo pacman -S --noconfirm fontconfig
 mkdir -p ~/.fonts.conf.d
-cp ~/texlive/2025/texmf-var/fonts/conf/texlive-fontconfig.conf ~/.fonts.conf.d/09-texlive.conf
+cp ~/texlive/2026/texmf-var/fonts/conf/texlive-fontconfig.conf ~/.fonts.conf.d/09-texlive.conf
 
 # 更新字体数据库
 luaotfload-tool --update
@@ -32,10 +35,10 @@ fc-cache -fv
 # env
 # 配置环境(也可以直接使用.bashrc，注意这里是使用bash进行操作的)
 echo '' >> ~/.bashrc
-echo '# TeX Live 2025' >> ~/.bashrc
-echo 'export PATH=/home/texlive/2025/bin/x86_64-linux:$PATH' >> ~/.bashrc
-echo 'export MANPATH=/home/texlive/2025/texmf-dist/doc/man:$MANPATH' >> ~/.bashrc
-echo 'export INFOPATH=/home/texlive/2025/texmf-dist/doc/info:$INFOPATH' >> ~/.bashrc
+echo '# TeX Live 2026' >> ~/.bashrc
+echo 'export PATH=/home/texlive/2026/bin/x86_64-linux:$PATH' >> ~/.bashrc
+echo 'export MANPATH=/home/texlive/2026/texmf-dist/doc/man:$MANPATH' >> ~/.bashrc
+echo 'export INFOPATH=/home/texlive/2026/texmf-dist/doc/info:$INFOPATH' >> ~/.bashrc
 echo '' >> ~/.bashrc
 source ~/.bashrc
 
@@ -89,6 +92,7 @@ perl /mnt/iso/install-tl --profile=texlive.profile
 # c -> klmnopstuvwxyzABC -> lmp -> dijSIM -> ef -> r
 # -> d -> 1 -> r
 # -> o -> d -> s -> r
+# -> 保存配置文件到当前目录
 # -> i -> 回车开始安装
 # 安装完退出当前目录，并取消挂载
 sudo umount -f /mnt/iso

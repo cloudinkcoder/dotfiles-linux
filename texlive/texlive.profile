@@ -1,16 +1,16 @@
-# texlive2025 install in "~/texlive/2025"
+# texlive install in "~/texlive/2026" with profile "texlive.profile"
 
-# texlive.profile written on Sun Mar  9 10:16:17 2025 UTC
+# texlive.profile written on Tue Mar  3 04:28:10 2026 UTC
 # It will NOT be updated and reflects only the
 # installation profile at installation time.
 selected_scheme scheme-custom
-TEXDIR /home/chan/texlive/2025
-TEXMFCONFIG ~/.texlive2025/texmf-config
+TEXDIR /home/chan/texlive/2026
+TEXMFCONFIG ~/.texlive2026/texmf-config
 TEXMFHOME ~/texmf
 TEXMFLOCAL /home/chan/texlive/texmf-local
-TEXMFSYSCONFIG /home/chan/texlive/2025/texmf-config
-TEXMFSYSVAR /home/chan/texlive/2025/texmf-var
-TEXMFVAR ~/.texlive2025/texmf-var
+TEXMFSYSCONFIG /home/chan/texlive/2026/texmf-config
+TEXMFSYSVAR /home/chan/texlive/2026/texmf-var
+TEXMFVAR ~/.texlive2026/texmf-var
 binary_x86_64-linux 1
 collection-basic 1
 collection-bibtexextra 1
