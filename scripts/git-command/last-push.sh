@@ -12,7 +12,7 @@
 
 git checkout --orphan last
 git add .
-git commit -m "latest init"
+git commit -m "first init"
 git branch -D main
 git branch -m main
 git branch --set-upstream-to=origin/main main
