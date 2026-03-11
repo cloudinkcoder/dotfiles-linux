@@ -3,8 +3,8 @@ input=$1
 base_install()
 {
   # pacman-contrib, fastfetch, neovim, lazygit, cron, tmux, Typst, less, ranger
-  sudo pacman -S --noconfirm pacman-contrib fastfetch neovim lazygit cronie tmux typst less ranger yazi
-  fastfetch -v && nvim -v && lazygit -v && crontab -V && tmux -V && typst -V && less --version && ranger --version
+  sudo pacman -S --noconfirm pacman-contrib fastfetch neovim lazygit cronie tmux less ranger
+  fastfetch -v && nvim -v && lazygit -v && crontab -V && tmux -V && less --version && ranger --version
   ############### Podman ###############
   sudo pacman -S --noconfirm podman podman-compose
   podman version && podman-compose --version
@@ -13,16 +13,10 @@ base_install()
   sudo pacman -S --noconfirm curl wget
   # tar, 7z, zip, unzip
   sudo pacman -S --noconfirm tar p7zip zip unzip
-  # mysql
-  sudo pacman -S mysql
   # sqlite
   sudo pacman -S --noconfirm sqlite && sqlite3 --version
   # fish
   sudo pacman -S --noconfirm fish && fish --version
-  # github cli
-  sudo pacman -S --noconfirm github-cli && gh --version
-  # man
-  sudo pacman -S --noconfirm man-db && sudo mandb
 }
 
 # 不要折腾各种CLI工具和沉迷于配置这些工具，Linux系统是给你学习编程的，而不是用于娱乐的
@@ -38,6 +32,16 @@ gui_install()
 
 more_install()
 {
+  # man
+  sudo pacman -S --noconfirm man-db && sudo mandb
+  # yazi
+  sudo pacman -S --noconfirm yazi && yazi --version
+  # typst
+  sudo pacman -S --noconfirm typst && typst -V
+  # github cli
+  sudo pacman -S --noconfirm github-cli && gh --version
+  # mysql
+  sudo pacman -S mysql
   # htop
   sudo pacman -S --noconfirm htop
   ############### Docker ###############
@@ -64,6 +68,13 @@ more_install()
   # pyright, rust-analyzer
   sudo pacman -S --noconfirm pyright rust-analyzer
   pyright --version
+  # Java, maven
+  sudo pacman -S --noconfirm jdk-openjdk maven
+  java --version && javac -version
+  mvn --version
+  # Go
+  sudo pacman -S --noconfirm go
+  go version
 }
 
 yay_install()
@@ -82,13 +93,6 @@ coding_install()
   gcc --version && gdb -v && clang --version && make -v && cmake --version
   sudo pacman -S --noconfirm llvm clang lldb
   clang --version && lldb --version
-  # Java, maven
-  sudo pacman -S --noconfirm jdk-openjdk maven
-  java --version && javac -version
-  mvn --version
-  # Go
-  sudo pacman -S --noconfirm go
-  go version
   # JavaScript (Node.js npm), Typescript
   sudo pacman -S --noconfirm nodejs npm typescript
   node -v && npm -v && tsc -v
